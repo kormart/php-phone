@@ -74,10 +74,10 @@
 	<meta charset="utf-8"> 
 	<meta name="viewport" content="width=device-width, initial-scale=1"> 
 	<title>eWeb</title> 
-	<link rel="stylesheet" href="http://d2dx.com/scaffold1020/jquery-mobile.css" />
-	<script src="http://d2dx.com/scaffold1020/jquery-164.js"></script>
-	<script src="http://d2dx.com/scaffold1020/jquery-mobile.js"></script>
-    <script src="https://c9.io/kormart/demo-project/workspace/html/wcg_2-1-26_gh_phono.js"></script> 
+	<link rel="stylesheet" href="js/jquery-mobile.css" />
+	<script src="js/jquery-164.js"></script>
+	<script src="js/jquery-mobile.js"></script>
+    <script src="js/wcg_2-1-26_gh_phono.js"></script> 
 <script>
 		
 	sipdomain = "vims1.com";
