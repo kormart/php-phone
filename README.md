@@ -1,7 +1,6 @@
 This is a PHP server for a very simple phone app working towards
 
-<pre><code>
-	<?php
+<pre><code> <?php
 
 	    // oAuth 2.0 Configuration
 		$OAUTH_SERVER = "https://auth.tfoundry.com/oauth";
@@ -14,7 +13,8 @@ This is a PHP server for a very simple phone app working towards
 </code></pre>
 
 
-Credits
+<h1>Credits
 <li>
 	Vladimir Katardjiev
 </li>
+</h1>
