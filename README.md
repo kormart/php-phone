@@ -13,8 +13,5 @@ This is a PHP server for a very simple phone app working towards
 </code></pre>
 
 
-<h1>Credits
-<li>
-	Vladimir Katardjiev
-</li>
-</h1>
+<h1>Credits </h1>
+<li> Vladimir Katardjiev </li>
