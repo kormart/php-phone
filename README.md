@@ -1,4 +1,9 @@
-This is a PHP server for a very simple phone app working towards
+
+<h2>php-phone </h2>
+
+This is a PHP server for a very simple phone app working towards AT&T's WebRTC API.
+
+Make sure you paste in your Developer Credentials, as indicated. You'll get the Credentials when you register a new app at the AT&T Alpha API site.
 
 <pre><code> <?php
 	    // oAuth 2.0 Configuration
@@ -12,7 +17,7 @@ This is a PHP server for a very simple phone app working towards
 </code></pre>
 
 
-<h1>Credits </h1>
+<h2>Credits </h2>
 <ul>
 	<li> Vladimir Katardjiev </li>
 </ul>
