@@ -25,7 +25,24 @@ Right now, you must use this version of the Chromium browser.
 		
 - Run the server! 
 		
-## The webapp
+## The JavaScript in the webapp
+The webapp that is served up by the PHP server implements a simple phone.
+Enabling calls to and from the webapp is as simple as including a JavaScript library.
+
+        <script src="js/att.js"></script> 
+
+To program against the calling capabilities of this JavaScript Library, you use jQuery and the same API as in Phono.com apps. 
+
+        function login(num)
+        {
+	      self.num = num;
+	      self.phono = $.phono({
+            server: server,
+            apiKey: "oauth <?php echo $_SESSION['access_token']; ?>" , 
+            video: false,
+               onReady: function() {
+                 $.mobile.changePage($("#make-call"));
+            },
 
 
 
