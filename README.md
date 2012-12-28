@@ -5,7 +5,7 @@ This is a PHP server for a very simple phone app working towards AT&T's WebRTC A
 
 ## Try it
 An instance of this server is running at http://php-phone.herokuapp.com  
-Right now, you must use this version of the Chromium browser.  
+Right now, you must use [this version of the Chromium browser](http://js.att.io/downloads/Leif_OSX_Release_2_5_0_15.app.zip).  
 
 ## Get started
 - Download the PHP script and the JavaScript libraries to where you want to run it. 
