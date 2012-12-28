@@ -4,24 +4,27 @@
 This is a PHP server for a very simple phone app working towards AT&T's WebRTC API.
 
 ## Try it
-An instance of this server is running at <a href="http://php-phone.herokuapp.com">http://php-phone.herokuapp.com</a>  
+An instance of this server is running at http://php-phone.herokuapp.com  
+Right now, you must use this version of the Chromium browser.  
 
 ## Get started
 - Download the PHP script and the JavaScript libraries to where you want to run it. 
-- Make sure you paste in your Developer Credentials, as indicated. You get the Credentials when you register a new app at the AT&T Alpha API site.
-
-
+- If you need help on spinning up a PHP server, look here http://net.tutsplus.com/tutorials/php/quick-tip-deploy-php-to-heroku-in-seconds/
+- Register a new app at AT&T Alpha API program, point the Callback URL to where you run it. 
+- You also get your Developer Credentials for the app.
+- Paste your Developer Credentials into the PHP script, like this: 
         <?php
         // oAuth 2.0 Configuration
         $OAUTH_SERVER = "https://auth.tfoundry.com/oauth";
-        // ***********************************
-        // Put your developer credentials here
-        // ***********************************
+        // -----------------------------------
+        // Put your Developer Credentials here
+        // -----------------------------------
         $CLIENT_ID = "******************************";
         $CLIENT_SECRET = "****************";
 		
+- Run the server! 
 		
-
+## The webapp
 
 
 
