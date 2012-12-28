@@ -13,7 +13,8 @@ Right now, you must use this version of the Chromium browser.
 - Register a new app at AT&T Alpha API program, point the Callback URL to where you run it. 
 - You also get your Developer Credentials for the app.
 - Paste your Developer Credentials into the PHP script, like this: 
-        <?php
+        
+		<?php
         // oAuth 2.0 Configuration
         $OAUTH_SERVER = "https://auth.tfoundry.com/oauth";
         // -----------------------------------
