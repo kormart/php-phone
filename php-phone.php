@@ -63,7 +63,7 @@
 
 	}
 	
-	// Now output our nice little app <script src="https://c9.io/kormart/demo-project/workspace/html/wcg_2-1-25_phono.js"></script>
+	// Now output our nice little app
 
 ?>
 
