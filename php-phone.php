@@ -5,7 +5,7 @@
     // -----------------------------------
     // Put your Developer Credentials here
     // -----------------------------------
-	$CLIENT_ID = "******************************";
+	$CLIENT_ID = "*******************************";
 	$CLIENT_SECRET = "****************";
 
 	// If we don't have a known access token already
@@ -77,12 +77,9 @@
 	<link rel="stylesheet" href="js/jquery-mobile.css" />
 	<script src="js/jquery-164.js"></script>
 	<script src="js/jquery-mobile.js"></script>
-    <script src="js/wcg_2-1-26_gh_phono.js"></script> 
+    <script src="https://node-phone.herokuapp.com/javascript/att.a1.js"></script> 
 <script>
-		
-	sipdomain = "vims1.com";
-	server = "https://api.foundry.att.com/a1/webrtc";
-	
+			
 	function formatPhone(phonenum) {
 		var regexObj = /^(?:\+?1[-. ]?)?(?:\(?([0-9]{3})\)?[-. ]?)?([0-9]{3})[-. ]?([0-9]{4})$/;
 		if (regexObj.test(phonenum)) {
@@ -101,11 +98,8 @@
 	function login(num)
 	{
 		self.num = num;
-		self.phono = $.phono({
-					server: server,
-					apiKey: "oauth <?php echo $_SESSION['access_token']; ?>" , 
-					video: false,
-					
+		self.att = $.att({
+					apiKey: "<?php echo $_SESSION['access_token']; ?>" , 
 					onReady: function() {
 						$.mobile.changePage($("#make-call"));
 					},
@@ -115,12 +109,17 @@
 					  	onIncomingCall: function(evt)
 					  	{
 					  		self.call = evt.call;
-					  		var rNum = evt.call.from;
-					  		
-							self.call.onHangup = function() {
-								$.mobile.changePage($("#make-call"));
-							};
-					  		
+					  		var rNum = evt.call.id;
+					  		console.log("Incoming Call: " + call.id);
+							call.bind({
+								onHangup: function(evt) {
+									console.log("Hangup Call...");
+									$.mobile.changePage($("#make-call"));
+								},
+								onError: function(evt) { 
+             					   alert("Incoming call error:" + evt); 
+            					}
+							});
 					  		var match = rNum.match(/[0-9]+/);
 					  		if (match.length > 0)
 					  			rNum = match[0];
@@ -151,10 +150,7 @@
 		self.call.onAddStream = function(e) {
 			console.log("Onaddstream");
 			remoteVideo.style.display = "block"
-			remoteVideo.src = webkitURL.createObjectURL(e.stream);
-								
-			//localVideo.style.display = "block"
-			//localVideo.src = webkitURL.createObjectURL(this.localStreams[0]);
+			remoteVideo.src = webkitURL.createObjectURL(e.stream);								
 		};
 	});
 	
@@ -182,7 +178,7 @@
 	{
 	
 		$(".remote-user").text(formatPhone(num));
-		self.call = phono.phone.dial("sip:"+num + "@" + sipdomain, {
+		self.call = att.phone.dial(num, {
 			onRing: function() {
 				
 			},
